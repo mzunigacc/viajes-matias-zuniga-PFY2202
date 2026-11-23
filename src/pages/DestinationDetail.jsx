@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router";
 
 import PageHeader from "../components/PageHeader";
 import StatusMessage from "../components/StatusMessage";
+import TravelOptions from "../components/TravelOptions";
 
 import { useFetch } from "../hooks/useFetch";
 import { getDestinationById } from "../services/destinationsApi";
@@ -83,34 +84,7 @@ function DestinationDetail() {
               </ul>
             </section>
 
-            <div className="mb-5">
-              <h2 className="text-2xl font-bold text-slate-900">
-                Opciones para tu viaje
-              </h2>
-
-              <p className="mt-2 text-slate-600">
-                Consulta alternativas de transporte y alojamiento
-                para este destino.
-              </p>
-            </div>
-
-            <div className="grid gap-6 lg:grid-cols-2">
-              <section aria-label="Opciones de vuelo">
-                <StatusMessage
-                  type="empty"
-                  title="Vuelos disponibles"
-                  message="Próximamente consultaremos precios, fechas y disponibilidad mediante GraphQL."
-                />
-              </section>
-
-              <section aria-label="Opciones de alojamiento">
-                <StatusMessage
-                  type="empty"
-                  title="Hoteles disponibles"
-                  message="Próximamente consultaremos precios, fechas y disponibilidad mediante GraphQL."
-                />
-              </section>
-            </div>
+            <TravelOptions destinationId={destinationId} />
           </>
         )}
       </div>

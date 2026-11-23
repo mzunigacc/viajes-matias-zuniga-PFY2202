@@ -1,0 +1,173 @@
+export const travelData = {
+  paris: {
+    flights: [
+      {
+        id: "flight-paris-1",
+        airline: "Air France",
+        origin: "Santiago",
+        destination: "París",
+        departureDate: "2027-01-15",
+        price: 890000,
+        available: true,
+      },
+      {
+        id: "flight-paris-2",
+        airline: "Iberia",
+        origin: "Santiago",
+        destination: "París",
+        departureDate: "2027-01-18",
+        price: 810000,
+        available: false,
+      },
+    ],
+    hotels: [
+      {
+        id: "hotel-paris-1",
+        name: "Hotel Lumière",
+        location: "Centro de París",
+        pricePerNight: 125000,
+        checkIn: "2027-01-16",
+        checkOut: "2027-01-21",
+        available: true,
+      },
+      {
+        id: "hotel-paris-2",
+        name: "Seine Boutique Hotel",
+        location: "Barrio Latino",
+        pricePerNight: 98000,
+        checkIn: "2027-01-16",
+        checkOut: "2027-01-21",
+        available: false,
+      },
+    ],
+  },
+
+  tokio: {
+    flights: [
+      {
+        id: "flight-tokio-1",
+        airline: "LATAM",
+        origin: "Santiago",
+        destination: "Tokio",
+        departureDate: "2027-02-10",
+        price: 1150000,
+        available: true,
+      },
+      {
+        id: "flight-tokio-2",
+        airline: "ANA",
+        origin: "Santiago",
+        destination: "Tokio",
+        departureDate: "2027-02-12",
+        price: 1290000,
+        available: true,
+      },
+    ],
+    hotels: [
+      {
+        id: "hotel-tokio-1",
+        name: "Shibuya City Hotel",
+        location: "Shibuya",
+        pricePerNight: 105000,
+        checkIn: "2027-02-11",
+        checkOut: "2027-02-17",
+        available: true,
+      },
+      {
+        id: "hotel-tokio-2",
+        name: "Asakusa Garden",
+        location: "Asakusa",
+        pricePerNight: 84000,
+        checkIn: "2027-02-11",
+        checkOut: "2027-02-17",
+        available: false,
+      },
+    ],
+  },
+
+  rio: {
+    flights: [
+      {
+        id: "flight-rio-1",
+        airline: "LATAM",
+        origin: "Santiago",
+        destination: "Río de Janeiro",
+        departureDate: "2027-01-20",
+        price: 280000,
+        available: true,
+      },
+      {
+        id: "flight-rio-2",
+        airline: "Sky Airline",
+        origin: "Santiago",
+        destination: "Río de Janeiro",
+        departureDate: "2027-01-22",
+        price: 245000,
+        available: true,
+      },
+    ],
+    hotels: [
+      {
+        id: "hotel-rio-1",
+        name: "Copacabana Praia Hotel",
+        location: "Copacabana",
+        pricePerNight: 92000,
+        checkIn: "2027-01-21",
+        checkOut: "2027-01-27",
+        available: true,
+      },
+      {
+        id: "hotel-rio-2",
+        name: "Rio Vista Hotel",
+        location: "Ipanema",
+        pricePerNight: 118000,
+        checkIn: "2027-01-21",
+        checkOut: "2027-01-27",
+        available: false,
+      },
+    ],
+  },
+
+  roma: {
+    flights: [
+      {
+        id: "flight-roma-1",
+        airline: "Iberia",
+        origin: "Santiago",
+        destination: "Roma",
+        departureDate: "2027-03-05",
+        price: 870000,
+        available: true,
+      },
+      {
+        id: "flight-roma-2",
+        airline: "Air France",
+        origin: "Santiago",
+        destination: "Roma",
+        departureDate: "2027-03-08",
+        price: 930000,
+        available: false,
+      },
+    ],
+    hotels: [
+      {
+        id: "hotel-roma-1",
+        name: "Roma Centro Suites",
+        location: "Centro histórico",
+        pricePerNight: 112000,
+        checkIn: "2027-03-06",
+        checkOut: "2027-03-12",
+        available: true,
+      },
+      {
+        id: "hotel-roma-2",
+        name: "Colosseo Boutique",
+        location: "Monti",
+        pricePerNight: 135000,
+        checkIn: "2027-03-06",
+        checkOut: "2027-03-12",
+        available: true,
+      },
+    ],
+  },
+};
