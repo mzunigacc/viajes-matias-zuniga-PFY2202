@@ -1,16 +1,103 @@
-# React + Vite
+# Rutas del Mundo
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación web de una agencia de viajes ficticia, desarrollada para la actividad sumativa de la Semana 5 de Desarrollo Frontend II (PFY2202).
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+La aplicación permite explorar destinos turísticos y consultar alternativas de vuelos y alojamientos para cada destino.
 
-## React Compiler
+Se utilizan dos mecanismos de comunicación con un backend simulado:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **REST:** catálogo de destinos, países, descripciones y actividades populares.
+- **GraphQL:** consulta de vuelos y hoteles por destino, incluyendo precios, fechas y disponibilidad.
 
-## Expanding the Oxlint configuration
+Los datos son ficticios y se utilizan exclusivamente con fines académicos.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tecnologías
+
+- React y Vite
+- JavaScript y Tailwind CSS
+- React Router
+- Mock Service Worker (MSW)
+- Apollo Client y GraphQL
+
+## Funcionalidades
+
+- Página de inicio y catálogo de destinos.
+- Navegación al detalle de cada destino.
+- Consulta REST de destinos y actividades.
+- Consulta GraphQL de vuelos y hoteles.
+- Visualización de fechas, precios y disponibilidad.
+- Estados de carga, error y ausencia de resultados.
+- Reintentos y simulación de errores del servidor.
+- Interfaz responsiva y página 404.
+
+## Arquitectura
+
+El frontend separa sus responsabilidades en:
+
+- `src/pages/`: vistas asociadas a las rutas.
+- `src/components/`: componentes reutilizables.
+- `src/hooks/`: lógica compartida para peticiones REST.
+- `src/services/`: comunicación con la API REST.
+- `src/graphql/`: configuración de Apollo y consultas GraphQL.
+- `src/mocks/`: datos y manejadores del backend simulado.
+- `src/utils/`: funciones de presentación de datos.
+
+### Flujo de funcionamiento
+
+1. React consulta el catálogo mediante REST.
+2. El usuario selecciona un destino.
+3. React Router carga el detalle correspondiente.
+4. Apollo consulta vuelos y hoteles mediante GraphQL.
+5. MSW intercepta las solicitudes y devuelve datos simulados.
+
+## Ejecución local
+
+Requiere una versión de Node.js compatible con Vite 8.
+
+Instalar dependencias:
+
+    npm ci
+
+Iniciar el servidor de desarrollo:
+
+    npm run dev
+
+## Validaciones
+
+Compilar la aplicación:
+
+    npm run build
+
+Validar el código:
+
+    npx oxlint src
+
+Las pruebas funcionales consideran navegación, visualización de datos REST y GraphQL, errores simulados, reintentos y adaptación a distintos tamaños de pantalla.
+
+## Endpoints simulados
+
+| Método | Endpoint | Descripción |
+|---|---|---|
+| GET | `/api/destinations` | Catálogo de destinos |
+| GET | `/api/destinations/:destinationId` | Detalle individual |
+| POST | `/graphql` | Consulta `GetTravelOptions` |
+
+El backend simulado funciona mediante MSW en desarrollo y en GitHub Pages.
+
+## Publicación
+
+Repositorio:
+
+https://github.com/mzunigacc/viajes-matias-zuniga-PFY2202
+
+Aplicación:
+
+https://mzunigacc.github.io/viajes-matias-zuniga-PFY2202/
+
+La publicación se realiza automáticamente mediante GitHub Actions.
+
+## Autor
+
+Matías Zúñiga — Desarrollo Frontend II, PFY2202.
